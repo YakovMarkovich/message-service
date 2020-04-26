@@ -32,10 +32,11 @@ public class BackOffice implements IBackOffice {
 	}
 
 	@Override
-	public List<LocalDateTime> getDatesBigValues(int sensorId, LocalDateTime from, LocalDateTime to, int sensorValue) {
+	public List<LocalDateTime> getDatesBigValues(int sensorId, LocalDateTime from, 
+			LocalDateTime to, int sensorValue) {
 		List<SensorDoc> sensors = 
-			repo.findBySensorIdAndTimestampBetweenAndAvgValueGreaterThan(sensorId,getMillis(from), 
-					getMillis(to),sensorValue);
+			repo.findBySensorIdAndTimestampBetweenAndAvgValueGreaterThan(sensorId,
+					getMillis(from), getMillis(to), sensorValue);
 		return sensors.stream().map(this::getLocalDateTime).collect(Collectors.toList());
 	}
 	

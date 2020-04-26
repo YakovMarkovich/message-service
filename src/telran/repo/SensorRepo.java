@@ -8,7 +8,7 @@ import telran.domain.SensorDoc;
 
 public interface SensorRepo extends StatisticRepo,MongoRepository<SensorDoc, Object>{
 
-	List<SensorDoc> findBySensorIdAndTimestampBetweenAndAvgValueGreaterThan(int sensorId, long millis, long millis2,
-			int sensorValue);
+	List<SensorDoc> findBySensorIdAndTimestampBetweenAndAvgValueGreaterThan(int sensorId, 
+			long millis, long millis2, int sensorValue);
 
 }

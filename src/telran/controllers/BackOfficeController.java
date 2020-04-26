@@ -22,7 +22,7 @@ public class BackOfficeController {
 	}
 	
 	@GetMapping("/sensor/dates")
-	List<LocalDateTime> getDatesBigValues(int sensorId, String fromDateTime, String toDateTime, int sensorValue)
+	List<LocalDateTime> getDatesBigValues(int sensorId, int sensorValue,String fromDateTime,String toDateTime)
 	{
 		return back.getDatesBigValues(sensorId, LocalDateTime.parse(fromDateTime), 
 				LocalDateTime.parse(toDateTime), sensorValue);
