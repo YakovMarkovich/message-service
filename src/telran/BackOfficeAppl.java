@@ -8,7 +8,6 @@ public class BackOfficeAppl {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BackOfficeAppl.class, args);
-
 	}
 
 }
